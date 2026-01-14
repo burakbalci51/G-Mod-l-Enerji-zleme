@@ -1,0 +1,42 @@
+sensor:
+  - platform: statistics
+    name: "Energy consumption Week"
+    entity_id: sensor.energy_meter_energy_1
+    state_characteristic: sum_differences_nonnegative
+    max_age:
+      days: 7
+        
+  - platform: statistics
+    name: "Energy consumption Month"
+    entity_id: sensor.energy_meter_energy_1
+    state_characteristic: sum_differences_nonnegative
+    max_age:
+      days: 28
+
+  - platform: statistics
+    name: "Energy consumption Year"
+    entity_id: sensor.energy_meter_energy_1
+    state_characteristic: sum_differences_nonnegative
+    max_age:
+      days: 365
+      
+  - platform: statistics
+    name: "Energy consumption 365 days"
+    entity_id: sensor.energy_meter_energy_1
+    state_characteristic: sum_differences_nonnegative
+    max_age:
+      days: 365
+
+  - platform: statistics
+    name: "Energy consumption Max 24H"
+    entity_id: sensor.energy_meter_power_1
+    state_characteristic: value_max
+    max_age:
+      hours: 24
+      
+  - platform: statistics
+    name: "Energy consumption Min 24H"
+    entity_id: sensor.energy_meter_power_1
+    state_characteristic: value_min
+    max_age:
+      hours: 24
